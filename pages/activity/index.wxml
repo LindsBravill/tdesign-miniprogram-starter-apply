@@ -28,7 +28,7 @@
   <view class="share">
     <t-icon name="share" size="48rpx" />分享
   </view>
-  <t-button theme="primary">立即购买{{priceRange}}</t-button>
+  <t-button theme="primary" bind:tap="gotoPurchase">立即购买{{priceRange}}</t-button>
 </view>
 <!-- 弹出详情面板 -->
 <t-popup visible="{{popupVisible}}" placement="bottom">

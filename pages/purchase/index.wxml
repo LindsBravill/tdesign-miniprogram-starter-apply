@@ -1,0 +1,60 @@
+<!--pages/purchase/index.wxml-->
+<view class="atvInfo">
+  <view class="name">{{atvInfo.name}}</view>
+  <view class="info">
+    <view>
+      <t-icon name="time" size="16px" style="color: #0052D9;" />
+      {{atvInfo.date}}
+    </view>
+    <view>
+      <t-icon name="location" size="16px" style="color: #0052D9;" />
+      {{atvInfo.location}}
+    </view>
+  </view>
+</view>
+<view class="ticketInfo">
+  <view class="users">
+    <view class="title">
+      人员信息
+      <t-button icon="add" content="增加人员"></t-button>
+    </view>
+    <t-radio-group t-class="horizontal-box" value="{{userValue}}" bind:change="changeUser">
+      <view wx:for="{{users}}" wx:key="index" class="card {{userValue == index ? 'card--active' : ''}}">
+        <t-icon wx:if="{{userValue == index}}" name="check" t-class="card__icon" />
+        <t-radio value="{{index}}" label="{{item}}" icon="none" borderless />
+      </view>
+    </t-radio-group>
+  </view>
+  <view class="session">
+    <view class="title">
+      票类场次
+    </view>
+    <t-radio-group t-class="horizontal-box" value="{{sessionValue}}" bind:change="changeSession">
+      <view wx:for="{{session}}" wx:key="index" class="card {{sessionValue == index ? 'card--active' : ''}}">
+        <t-icon wx:if="{{sessionValue == index}}" name="check" t-class="card__icon" />
+        <t-radio value="{{index}}" label="{{item}}" icon="none" borderless />
+      </view>
+    </t-radio-group>
+  </view>
+  <view class="price">
+    <view class="title">
+      票档价格
+    </view>
+    <t-radio-group t-class="horizontal-box" value="{{priceValue}}" bind:change="changePrice">
+      <view wx:for="{{price}}" wx:key="index" class="card {{priceValue == index ? 'card--active' : ''}}">
+        <t-icon wx:if="{{priceValue == index}}" name="check" t-class="card__icon" />
+        <t-radio value="{{index}}" label="{{item.title}}" icon="none" borderless />
+        <view class="ticketPrice">
+          <text wx:for="{{item.value}}">{{item}}</text>
+        </view>
+      </view>
+    </t-radio-group>
+  </view>
+</view>
+<view class="tabbar">
+  <view class="pay">
+    待支付:
+    <text>￥{{pay}}</text>
+  </view>
+  <t-button theme="primary">确认购买</t-button>
+</view>

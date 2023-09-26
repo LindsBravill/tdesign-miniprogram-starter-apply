@@ -1,0 +1,219 @@
+/* pages/purchase/index.wxss */
+page {
+  padding-bottom: calc(env(safe-area-inset-bottom) + 80px);
+}
+
+.atvInfo {
+  width: 91.5vw;
+  height: 74px;
+  margin: 16px 16px 0 16px;
+  border-bottom: 0.5px solid #e7e7e7;
+
+  .name {
+    color: #000000e6;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "PingFang SC";
+    text-align: left;
+    line-height: 28px;
+  }
+
+  .info {
+    display: flex;
+    margin-top: 8px;
+
+    view {
+      display: flex;
+      color: #000000e6;
+      font-size: 14px;
+      font-weight: 400;
+      font-family: "PingFang SC";
+      text-align: left;
+      line-height: 22px;
+      align-items: center;
+
+      .t-icon {
+        margin-right: 4px;
+      }
+    }
+
+    :nth-child(1) {
+      margin-right: 8px;
+    }
+  }
+}
+
+.ticketInfo {
+  margin: 16px 16px 0 16px;
+  width: 91.5vw;
+
+  .title {
+    color: #000000e6;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "PingFang SC";
+    text-align: left;
+    line-height: 24px;
+    position: relative;
+
+    button {
+      position: absolute;
+      right: 0;
+      width: 94px;
+      height: 28px;
+      border-radius: 100px;
+      color: #000000e6;
+      font-size: 14px;
+      font-weight: 600;
+      font-family: "PingFang SC";
+      text-align: center;
+      line-height: 22px;
+
+      .t-icon {
+        font-size: 14px;
+        font-weight: 600;
+        font-family: "PingFang SC";
+      }
+    }
+  }
+
+  .card {
+    position: relative;
+    border-radius: 12rpx;
+    overflow: hidden;
+    box-sizing: border-box;
+    border: 1.5px solid #dcdcdc;
+    margin-bottom: 12px;
+  }
+
+  .card--active {
+    border: 2px solid #0052d9;
+  }
+
+  .card--active::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    border: 14px solid #0052d9;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+  }
+
+  .card__icon {
+    color: #fff;
+    position: absolute;
+    left: 1.5px;
+    top: 1.5px;
+    z-index: 1;
+  }
+
+  .t-radio__title {
+    color: #000000e6;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "PingFang SC";
+    text-align: left;
+    line-height: 24px;
+  }
+
+  /* 横向布局 */
+  .horizontal-box {
+    align-items: center;
+    margin-top: 12px;
+  }
+
+  .users {
+
+    .card {
+      width: 106.33px;
+      height: 56px;
+      margin-right: 12px;
+    }
+
+    .horizontal-box {
+      display: flex;
+    }
+  }
+
+  .session,
+  .price {
+    margin-top: 12px;
+  }
+
+  .ticketPrice {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    z-index: 99;
+
+    text {
+      color: #1b1b1b;
+      font-size: 16px;
+      font-weight: 600;
+      font-family: "PingFang SC";
+      text-align: left;
+      line-height: 24px;
+    }
+
+    :nth-child(1) + text{
+      color: #777777;
+      font-weight: 400;
+      margin-left: 4px;
+      text-decoration: line-through;
+    }
+  }
+}
+
+.tabbar {
+  width: 100vw;
+  background-color: #ffffff;
+  height: calc(env(safe-area-inset-bottom) + 80px);
+  border-top: 0.5px solid #e7e7e7;
+  display: flex;
+  padding: 0 16px;
+  position: fixed;
+  bottom: 0px;
+  z-index: 99;
+
+  .pay {
+    margin-top: 16px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    color: #000000e6;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "PingFang SC";
+    text-align: center;
+    line-height: 22px;
+
+    text {
+      color: #0052d9;
+      font-size: 20px;
+      font-weight: 600;
+      font-family: "PingFang SC";
+      text-align: center;
+      line-height: 28px;
+    }
+  }
+
+  button {
+    margin-top: 16px;
+    width: 201px;
+    height: 48px;
+    border-radius: 6px;
+    opacity: 1;
+    background: #0052d9;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "PingFang SC";
+    text-align: center;
+    line-height: 24px;
+    position: absolute;
+    left: 41.3vw;
+  }
+}

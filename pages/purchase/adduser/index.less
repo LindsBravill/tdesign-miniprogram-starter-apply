@@ -1,0 +1,41 @@
+/* pages/purchase/adduser/index.wxss */
+.t-button {
+  width: 91.5vw;
+  margin-bottom: calc(env(safe-area-inset-bottom) + 16px);
+  bottom: 0;
+  left: 4.25vw;
+}
+
+.t-cell::after {
+  content: '';
+  height: 1px;
+  position: absolute;
+  background-color: #e7e7e7;
+}
+
+.t-input__label {
+  width: 21.6vw;
+}
+
+.name,
+.birthday,
+.number,
+.identity {
+  text::after {
+    content: '*';
+    color: #d54941;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "PingFang SC";
+    text-align: left;
+    line-height: 24px;
+    margin-left: 4px;
+  }
+}
+
+.birthday,
+.occupation{
+  .t-input__control--disabled{
+    color: #000000;
+  }
+}

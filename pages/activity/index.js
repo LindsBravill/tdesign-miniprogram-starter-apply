@@ -46,7 +46,6 @@ Page({
   // 加载页面信息
   async loadData() {
     const detail = await fetchAtvDetails();
-    console.log(detail);
     this.setData({
       guestList: detail.guestList,
       venueList: detail.venueList,

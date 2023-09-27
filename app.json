@@ -4,7 +4,8 @@
     "pages/home/chooseLocation/index",
     "pages/my/index",
     "pages/activity/index",
-    "pages/purchase/index"
+    "pages/purchase/index",
+    "pages/purchase/adduser/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

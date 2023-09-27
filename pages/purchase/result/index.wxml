@@ -1,0 +1,54 @@
+<!--pages/purchase/result/index.wxml-->
+<t-result theme="success" title="购买成功" />
+<view class="atvInfo">
+  <t-image src="{{atvInfo.img}}" />
+  <view class="atvName">{{atvInfo.name}}</view>
+  <view class="info">
+    <view class="date">
+      <t-icon name="time" size="16px" style="color: #0052D9;" />
+      {{atvInfo.date}}
+    </view>
+    <view class="location">
+      <t-icon name="location" size="16px" style="color: #0052D9;" />
+      {{atvInfo.location}}
+    </view>
+  </view>
+</view>
+
+<view class="title">报名人员</view>
+<view class="userInfo">
+  <t-avatar class="profile" image="{{userInfo.profile}}" />
+  <view class="info">
+    <view class="username">{{userInfo.name}}</view>
+    <view class="tags">
+      <text wx:for="{{userInfo.tags}}">{{item}}</text>
+    </view>
+  </view>
+</view>
+
+<view class="tabbar">
+  <t-button theme="light" variant="outline" icon="share" content="分享给朋友" size="large" bind:tap="handleShare"></t-button>
+  <t-button theme="primary" size="large">去看看</t-button>
+</view>
+<!-- 弹出分享面板 -->
+<t-popup visible="{{popupVisible}}" placement="bottom">
+  <view class="friends">
+    <view class="mode">分享给朋友</view>
+    <view class="options">
+      <view wx:for="{{shareGrid.friends}}" class="cell">
+        <t-avatar image="{{item.image}}" />
+        <text>{{item.label}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="media">
+    <view class="mode">分享到社媒</view>
+    <view class="options">
+      <view wx:for="{{shareGrid.media}}" class="cell">
+        <t-avatar image="{{item.image}}" />
+        <text>{{item.label}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="cancelBtn" bind:tap="handleShare">取消</view>
+</t-popup>

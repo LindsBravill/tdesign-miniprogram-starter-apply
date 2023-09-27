@@ -8,6 +8,13 @@
     "miniprogram": {
       "list": [
         {
+          "name": "调试购买页面",
+          "pathName": "pages/purchase/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "活动详情页调试",
           "pathName": "pages/activity/index",
           "query": "",

@@ -133,6 +133,7 @@ Page({
         theme: 'success',
         direction: 'column',
       });
+      wx.navigateBack(1)
     }
   },
 

@@ -56,5 +56,5 @@
     待支付:
     <text>￥{{pay}}</text>
   </view>
-  <t-button theme="primary">确认购买</t-button>
+  <t-button theme="primary" bind:tap="comfirm">确认购买</t-button>
 </view>

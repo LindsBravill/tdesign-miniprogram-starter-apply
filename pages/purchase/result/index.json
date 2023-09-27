@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "t-result": "tdesign-miniprogram/result/result",
+    "t-button": "tdesign-miniprogram/button/button",
+    "t-image": "tdesign-miniprogram/image/image",
+    "t-icon": "tdesign-miniprogram/icon/icon",
+    "t-avatar": "tdesign-miniprogram/avatar/avatar",
+    "t-popup": "tdesign-miniprogram/popup/popup"
+  },
+  "navigationBarTitleText": "购买结果"
+}

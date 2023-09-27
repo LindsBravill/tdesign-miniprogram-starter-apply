@@ -1,0 +1,187 @@
+/* pages/purchase/result/index.wxss */
+page {
+  background: #f5f6f7;
+}
+
+.t-result {
+  margin: 24px 0;
+}
+
+.atvInfo {
+  width: 91.5vw;
+  height: 34.7vh;
+  border-radius: 12px;
+  background: #ffffff;
+  ;
+  box-shadow: 0 6px 30px 5px #0000000d, 0 16px 24px 2px #0000000a, 0 8px 10px -5px #00000014;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  padding-top: 16px;
+
+  .t-image {
+    width: 82.9vw;
+    height: 21.6vh;
+    border-radius: 9.06px;
+    margin: 0 auto;
+  }
+
+  .atvName {
+    color: #000000e6;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "PingFang SC";
+    text-align: left;
+    line-height: 26px;
+    margin-left: 4.3vw;
+    margin-top: 2.5vh;
+  }
+
+  .info {
+    display: flex;
+    margin-left: 4.3vw;
+    margin-top: 1.5vh;
+
+    view {
+      display: flex;
+      color: #000000e6;
+      font-size: 12px;
+      font-weight: 400;
+      font-family: "PingFang SC";
+      text-align: left;
+      line-height: 20px;
+      align-items: center;
+
+      .t-icon {
+        margin-right: 4px;
+      }
+    }
+
+    .date {
+      margin-right: 4.3vw;
+    }
+  }
+}
+
+.title {
+  color: #000000e6;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "PingFang SC";
+  text-align: left;
+  line-height: 24px;
+  margin-left: 4.3vw;
+  margin-top: 3vh;
+}
+
+.userInfo {
+  margin-left: 4.3vw;
+  width: 91.5vw;
+  height: 10.1vh;
+  border-radius: 9px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+
+  .profile {
+    width: 48px;
+    height: 48px;
+    border-radius: 999px;
+    margin: 0 4.3vw;
+  }
+
+  .info {
+    .username {
+      color: #000000e6;
+      font-size: 16px;
+      font-weight: 400;
+      font-family: "PingFang SC";
+      text-align: left;
+      line-height: 24px;
+    }
+
+    .tags {
+      width: 251px;
+      height: 22px;
+      opacity: 1;
+      color: #00000099;
+      font-size: 14px;
+      font-weight: 400;
+      font-family: "PingFang SC";
+      text-align: left;
+      line-height: 22px;
+
+      text {
+        margin-right: 4px;
+      }
+    }
+  }
+}
+
+.tabbar {
+  position: fixed;
+  width: 100vw;
+  height: 10vh;
+  bottom: calc(env(safe-area-inset-bottom));
+  padding-left: 4.3vw;
+
+  button {
+    width: 44.8vw;
+    height: 6vh;
+    border-radius: 6px;
+    margin-right: 2vw;
+    margin-top: 4.3vw;
+  }
+}
+
+.t-popup {
+  .mode {
+    color: #00000066;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "PingFang SC";
+    text-align: left;
+    line-height: 22px;
+    margin: 2vh 0 4.3vw 2vh;
+  }
+
+  .options {
+    display: flex;
+    justify-content: space-around;
+
+    .cell {
+      width: 21.3vw;
+      height: 11.8vh;
+      display: flex;
+      flex-direction: column;
+      color: #000000e6;
+      font-size: 12px;
+      font-weight: 400;
+      font-family: "PingFang SC";
+      line-height: 20px;
+      justify-content: center;
+      align-items: center;
+
+      .t-avatar {
+        height: 40px;
+        width: 40px;
+      }
+    }
+  }
+
+  .cancelBtn {
+    background: #fff;
+    width: 100vw;
+    height: 6vh;
+    border-top: 0.5px solid #e7e7e7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000e6;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "PingFang SC";
+    text-align: center;
+    line-height: 24px;
+  }
+}

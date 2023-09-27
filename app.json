@@ -5,7 +5,8 @@
     "pages/my/index",
     "pages/activity/index",
     "pages/purchase/index",
-    "pages/purchase/adduser/index"
+    "pages/purchase/adduser/index",
+    "pages/purchase/result/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

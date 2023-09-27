@@ -58,9 +58,22 @@ Page({
   },
 
   // 增加人员
-  addUser(){
+  addUser() {
     wx.navigateTo({
       url: './adduser/index',
+    })
+  },
+
+  // 确认购买
+  comfirm() {
+    const info = {
+      user: this.data.users[this.data.userValue],
+      session: this.data.session[this.data.sessionValue],
+      price: this.data.price[this.data.priceValue]
+    };
+    console.log("info: ", info);
+    wx.navigateTo({
+      url: '/pages/purchase/result/index',
     })
   },
 

@@ -16,7 +16,7 @@
   <view class="users">
     <view class="title">
       人员信息
-      <t-button icon="add" content="增加人员"></t-button>
+      <t-button icon="add" content="增加人员" bind:tap="addUser"></t-button>
     </view>
     <t-radio-group t-class="horizontal-box" value="{{userValue}}" bind:change="changeUser">
       <view wx:for="{{users}}" wx:key="index" class="card {{userValue == index ? 'card--active' : ''}}">

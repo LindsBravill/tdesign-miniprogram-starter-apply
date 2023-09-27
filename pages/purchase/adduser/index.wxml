@@ -1,0 +1,24 @@
+<!--pages/purchase/adduser/index.wxml-->
+<t-cell title="视为默认" hover>
+  <t-switch defaultValue="{{true}}" slot="note" bind:tap="handleSwitch"/>
+</t-cell>
+
+<t-input class="name" label="姓名" placeholder="请输入您的姓名" bindchange="onInput" data-label="name"></t-input>
+
+<t-input label="生日" value="{{ birthday }}" suffixIcon="{{ { name: 'calendar' } }}" disabled bind:click="chooseBirthday" class="birthday" />
+<t-date-time-picker title="选择生日" visible="{{chooseBirthday}}" mode="date" defaultValue="{{birthday}}" format="YYYY-MM-DD" bindchange="onConfirm" bindpick="onColumnChange" bindcancel="hidePicker" start="{{start}}" end="{{end}}" />
+
+<t-input class="number" label="手机号" placeholder="请输入您的手机号码" data-label="number" bindchange="onInput"></t-input>
+
+<t-input class="identity" label="身份证" placeholder="请输入您的身份证号码" data-label="identity" bindchange="onInput"></t-input>
+
+<t-input class="email" label="邮箱" placeholder="请输入您的邮箱" data-label="email" bindchange="onInput"></t-input>
+
+<t-input label="职业" value="{{occupation}}" suffixIcon="{{ { name: 'chevron-right' } }}" disabled bind:click="chooseOccupation" class="occupation" />
+<t-picker visible="{{chooseOccupation}}" value="{{chosenOccupation}}" title="选择职业" cancelBtn="取消" confirmBtn="确认" bindchange="onPickerChange" bindpick="onColumnChange" bindcancel="onPickerCancel">
+  <t-picker-item options="{{occupationOptions}}"></t-picker-item>
+</t-picker>
+
+<t-toast id="t-toast" />
+
+<t-button theme="primary" size="large" style="position: absolute;" bind:tap="comfirm">确定</t-button>
